@@ -1,10 +1,10 @@
 import React from 'react';
+import './About.css'
 
 function About() {
      return (
          <div className='home-page-container'>
             <div className='photo'>
-                <img src='/aboutImg.jpg' alt="event"/>
             </div>
             <div className='about'>
                 <p>Explore and book amazing and fun activities for your event.</p>

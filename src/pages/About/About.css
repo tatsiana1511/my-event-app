@@ -1,0 +1,23 @@
+.home-page-container {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.photo {
+    background-image: url('../../../public/aboutImg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about {
+    font-size: 30px;
+    font-family: "playfair display", serif;
+}
+
+.about p {
+    width: 70%;
+    margin: 100px auto 0;
+    text-align: center;
+}
