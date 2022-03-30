@@ -6,9 +6,15 @@
 }
 
 .photo {
+    width: 50%;
     background-image: url('../../../public/aboutImg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.photo img {
+    width: 100%;
 }
 
 .about {

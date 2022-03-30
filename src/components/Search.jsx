@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Search() {
-    const [query, setQuery] = useState('')
+    const [query, setQuery] = useState('');
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     const handleQueryChange = (evt) => {
         setQuery(evt.target.value);
@@ -10,14 +12,16 @@ function Search() {
     }
 
     const handleSearch = () => {
-        Navigate('/experiences/?searchTerm='+{query});
+        navigate('/experiences/?searchTerm='+ query);
     }
 
     return (
-        <div>
+        <li className='nav-item'>
             <input type="text" name="search" placeholder="Search" value={query} onChange={handleQueryChange}></input>
             <button onClick={handleSearch}>Search</button>
-        </div>
+        </li>
     )}
+
+    export default Search;
 
 
