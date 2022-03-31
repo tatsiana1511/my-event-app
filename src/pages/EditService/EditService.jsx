@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../CreateService/CreateService.css';
 
 function EditService() {
 
@@ -70,26 +71,36 @@ function EditService() {
     }
 
     return (
-        <div onSubmit={handleSubmit}>
+        <div onSubmit={handleSubmit} className='form-container'>
             <h3>Edit your service:</h3>
-            <form>
-                <label>Service Name</label>
-                <input type="text" name="service-name" value={serviceName} onChange={handleServiceNameChange} required></input>
-                <label>Service Type</label>
-                <select name="service-type" value={serviceType} onChange={handleServiceTypeChange}>
-                    <option value="">Select Service Type</option>
-                    <option value="food">Food</option>
-                    <option value="drinks">Drinks</option>
-                    <option value="master-class">Master Class</option>
-                    <option value="kids-entertainment">Kids Entertainment</option>
-                    <option value="other">Other</option>
-                </select>
-                <label>Description</label>
-                <input type="text" name="description" maxlength="200" value={description} onChange={handleDescriptionChange}></input>
-                <label>Price per hour</label>
-                <input type="number" name="price-per-hour" value={pricePerHour} onChange={handlePricePerHourChange}></input>
-                <button type="submit">EDIT</button>
-            </form>
+            <div className="custom-form">
+                <form>
+                    <div className="form-group">
+                        <label className='col-form-label'>Service Name</label>
+                        <input className='form-control' type="text" name="service-name" value={serviceName} onChange={handleServiceNameChange} required></input>
+                    </div>
+                    <div className="form-group">
+                        <label className='col-form-label'>Service Type</label>
+                        <select className='form-control' name="service-type" value={serviceType} onChange={handleServiceTypeChange}>
+                            <option value="">Select Service Type</option>
+                            <option value="food">Food</option>
+                            <option value="drinks">Drinks</option>
+                            <option value="master-class">Master Class</option>
+                            <option value="kids-entertainment">Kids Entertainment</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div className="form-group">
+                        <label className='col-form-label'>Description</label>
+                        <input className='form-control' type="text" name="description" maxlength="200" value={description} onChange={handleDescriptionChange}></input>
+                    </div>
+                    <div className="form-group">
+                        <label className='col-form-label'>Price per hour</label>
+                        <input className='form-control' type="number" name="price-per-hour" value={pricePerHour} onChange={handlePricePerHourChange}></input>
+                    </div>
+                    <button className='btn btn-success action-button' type="submit">EDIT</button>
+                </form>
+            </div>
         </div>
     )
 }

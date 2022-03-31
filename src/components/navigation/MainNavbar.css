@@ -1,3 +1,47 @@
 .nav-block {
     display: flex;
+    align-items: center;
+}
+
+.nav {
+    justify-content: space-between;
+    font-family: 'Pangolin', cursive;
+}
+
+.search {
+    background-color: #f8d0a9;
+    color: #3f515f;
+    border: none;
+    padding: 3px 7px 3px 7px;
+    border-radius: 3px;
+    margin-left: 8px;
+}
+
+.search-input {
+    border: none;
+    padding: 3px 7px 3px 7px;
+    border-radius: 3px;
+    margin-left: 50px;
+    
+}
+
+div.footer {
+    align-items: center;
+}
+
+a.nav-link {
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+a.nav-link.app-name {
+    font-size: 30px;
+}
+
+a.nav-link.sub-nav {
+    font-size: 15px;
+}
+
+a.current-tab {
+    border-bottom: #a76a61 solid 2px;
 }

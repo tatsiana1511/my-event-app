@@ -14,7 +14,7 @@ function ExperiencesPages() {
         async function populateAllExperiences() {
             let response = await fetch('/api/all-experiences');
             let allExperiencesFromBackend = await response.json();
-            const foundExperiences = allExperiencesFromBackend.filter(experience => experience.serviceName.includes(searchTerm));
+            const foundExperiences = allExperiencesFromBackend.filter(experience => experience.serviceName.toLowerCase().includes(searchTerm));
 
             setAllExperiences(foundExperiences);
         }
@@ -28,7 +28,7 @@ function ExperiencesPages() {
             allExperiences.length !== 0 ?
                 allExperiences.map((exp) => {
                     return (
-                        <div key={exp.serviceName} className='card experience-card'>
+                        <div key={exp.serviceName} className='experience-card'>
                             <div className="card-body">
                                 <div>
                                     <span className='service-name'> {exp?.serviceName}</span>
@@ -36,11 +36,11 @@ function ExperiencesPages() {
                                 <hr></hr>
                                 <div>
                                     <span>Service Type:</span>
-                                    <span> {exp?.serviceType}</span>
+                                <span> {exp?.serviceType}</span>
                                 </div>
                                 <div>
                                     <span>Service description:</span>
-                                    <span> {exp?.serviceDescription} </span>
+                                    <span> {exp?.description}</span>
                                 </div>
                                 <div>
                                     {/* <span>Service price per hour:</span> */}

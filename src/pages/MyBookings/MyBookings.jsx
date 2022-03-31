@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import './MyBookings.css'
+import '../ExperiencesPage/ExperiencesPage.css';
 
 function MyBookings() {
 
@@ -36,7 +35,7 @@ function MyBookings() {
                             </div>
                             <div>
                                 <span>Event Location:</span>
-                                <span> {booking?.evenLocation}</span>
+                                <span> {booking?.eventLocation}</span>
                             </div>
                             <div>
                                 <span>Number of People:</span>
@@ -54,6 +53,10 @@ function MyBookings() {
                                 <span>Event Date:</span>
                                 <span> {booking?.eventDate}</span>
                             </div>
+                            <div>
+                                <span>Booking Status:</span>
+                                <span> {booking?.status} </span>
+                            </div>    
                         </div>
                     </div>
                 )

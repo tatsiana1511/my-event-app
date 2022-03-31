@@ -29,8 +29,12 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #7a7f82;
-  color: white;
+  background-color: #d9d1ca;
+  color: black;
   text-align: center;
   align-items: center;
+}
+
+.btn {
+  margin-right: 10px;
 }

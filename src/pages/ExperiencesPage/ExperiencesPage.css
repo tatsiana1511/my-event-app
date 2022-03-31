@@ -11,12 +11,15 @@
     border: 1px solid;
     border-color: #acb2b0;
     color: white;
+    border-radius: 5px;
 }
 
 .cards-container {
-    display: grid;
-    grid-template-columns: 30vw 30vw 30vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     background-color: #0c2223;
+    height: 100vh;
 }
 
 a.btn.btn-success {
@@ -28,6 +31,10 @@ a.btn.btn-success {
 
 .service-name {
     font-size: 25px;
+}
+
+div.card-body {
+    width: 270px;
 }
 
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './MainNavbar.css';
 
 function Search() {
     const [query, setQuery] = useState('');
@@ -17,8 +18,8 @@ function Search() {
 
     return (
         <li className='nav-item'>
-            <input type="text" name="search" placeholder="Search" value={query} onChange={handleQueryChange}></input>
-            <button onClick={handleSearch}>Search</button>
+            <input className='search-input' type="text" name="search" placeholder="Search" value={query.toLowerCase()} onChange={handleQueryChange}></input>
+            <button className='search' onClick={handleSearch}>Search</button>
         </li>
     )}
 

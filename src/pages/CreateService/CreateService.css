@@ -1,23 +1,26 @@
+form {
+    width: 50%;
+    margin-top: 50px;
+}
+
 .form-container {
     padding: 10px 20px 10px 20px;
     background-color: #0c2223;
     color: white;
-    width: 100%;
-    height: 540px;
+    height: 100vh;
+    justify-content: center;
 }
 
 .form-container h3 {
     color: #f8d0a9;
     text-align: center;
+    margin-top: 15px;
 }
 
 .form-container h4 {
     color: #d9d1ca;
-}
-
-label {
-    font-size: 20px;
     margin-top: 15px;
+    text-align: center;
 }
 
 label input {
@@ -30,7 +33,19 @@ label select {
 
 button.btn.btn-success {
     background-color: #f8d0a9;
-    margin-top: 15px;
     color: #3f515f;
     border: none;
+}
+
+button.action-button {
+    margin-top: 25px;
+}
+
+label.col-form-label {
+    font-size: 18px;
+}
+
+.custom-form {
+    display: flex;
+    justify-content: center;
 }

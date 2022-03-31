@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Search from '../Search';
+import Search from './Search';
 import './MainNavbar.css';
 
 function MainNavbar(props) {
@@ -14,11 +14,11 @@ function MainNavbar(props) {
       <ul className="nav">
         <div className='nav-block'>
           <li className="nav-item">
-            <Link to="/" className="nav-link active">My Event</Link>
+            <Link to="/" className="nav-link app-name">My Event</Link>
           </li>
           <Search />
         </div>
-        <div class="nav-block">
+        <div class="nav-block signup-login">
           <li className="nav-item">
             <Link to="/signup" className="nav-link">Sign Up</Link>
           </li>

@@ -6,6 +6,8 @@ module.exports = {
     create,
     getUserBookings,
     getBookingRequests,
+    acceptBooking,
+    rejectBooking,
 };
 
 async function create(req, res) {
@@ -41,6 +43,28 @@ async function getBookingRequests(req, res) {
         const experience = await Experience.findOne({ user: req.user._id }).exec();
         const bookingRequests = await Booking.find({ experience: experience._id }).exec();
         res.status(200).json(bookingRequests);
+    } catch(err) {
+        res.status(400).json(err);
+    }
+}
+
+async function acceptBooking(req, res) {
+    try {
+        await Booking.findOneAndUpdate({_id: req.params.id}, {
+            status: 'Accepted',
+        });
+        res.status(200).json();
+    } catch(err) {
+        res.status(400).json(err);
+    }
+}
+
+async function rejectBooking(req, res) {
+    try {
+        await Booking.findOneAndUpdate({_id: req.params.id}, {
+            status: 'Rejected',
+        });
+        res.status(200).json();
     } catch(err) {
         res.status(400).json(err);
     }

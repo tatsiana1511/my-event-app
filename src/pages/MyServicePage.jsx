@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import './ExperiencesPage/ExperiencesPage.css'
 
 function MyServicePage(props) {
     const [myService, setMyService] = useState(null);
@@ -39,30 +40,34 @@ function MyServicePage(props) {
 
     return (
         <>
-        {myService ?
-            <div>
-                <div>
-                    <span>Service name:</span>
-                    <span> {myService?.serviceName}</span>
+            <div className='cards-container'>
+                {myService ?
+                <div className='experience-card'>
+                    <div className="card-body">
+                        <div>
+                            <span>Service name:</span>
+                            <span> {myService?.serviceName}</span>
+                        </div>
+                        <div>
+                            <span>Service Type:</span>
+                            <span> {myService?.serviceType}</span>
+                        </div>
+                        <div>
+                            <span>Service description:</span>
+                            <span> {myService?.serviceDescription}</span>
+                        </div>
+                        <div>
+                            <span>Service price per hour:</span>
+                            <span> {myService?.pricePerHour}</span>
+                        </div>
+                        <Link to="/edit-service" className='btn btn-warning'>Edit</Link>
+                        <button className='btn btn-danger' onClick={deleteService}>Delete</button>
+                    </div>
                 </div>
-                <div>
-                    <span>Service Type:</span>
-                    <span> {myService?.serviceType}</span>
-                </div>
-                <div>
-                    <span>Service description:</span>
-                    <span> {myService?.serviceDescription}</span>
-                </div>
-                <div>
-                    <span>Service price per hour:</span>
-                    <span> {myService?.pricePerHour}</span>
-                </div>
-                <Link to="/edit-service" className='btn btn-warning'>Edit</Link>
-                <button className='btn btn-danger' onClick={deleteService}>Delete</button>
+                :
+                <h3>You have no services added.</h3>
+            }
             </div>
-            :
-            <h3>You have no services added.</h3>
-        }
         </>
     );
 }
