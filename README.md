@@ -32,7 +32,7 @@ The app currently performs full CRUD. The following features are also included: 
 ---
 
 ## Where to find
-Whenever you have a birthday party, anniversary celebration or regular hangout with your friends, or you are a service provider that can make someone's event filled with an interesing activity please visit My Event app by clicking [here](https://project2-int-design.herokuapp.com). Don't forget to sign up.
+Whenever you have a birthday party, anniversary celebration or regular hangout with your friends, or you are a service provider that can make someone's event filled with an interesing activity please visit My Event app by clicking [here](https://my-event-app-sei44.herokuapp.com/). Don't forget to sign up.
 
 ---
 
