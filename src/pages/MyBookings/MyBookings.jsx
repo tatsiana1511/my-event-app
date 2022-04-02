@@ -9,7 +9,7 @@ function MyBookings() {
     useEffect(() => {
         async function populateAllBookings() {
             let response = await fetch('/api/bookings', {
-                headers: { "Content-Type": "application/json", 'Authorization': 'Bearer ' + jwt },
+                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + jwt },
             });
             let userBookingsFromBackend = await response.json();
 
@@ -24,7 +24,7 @@ function MyBookings() {
             { userBookingsFromBackend.map((booking) => {
                 return (
                     <div className='card experience-card'>
-                        <div className="card-body">
+                        <div className='card-body'>
                             <div>
                                 <span>Full Name:</span>
                                 <span> {booking?.fullName}</span>

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const experienceSchema = new Schema({
-    postphoto: {type: String, required: true},
+    servicePhoto: {type: String, required: true},
     serviceName: {type: String, required: true},
     serviceType: {type: String, required: true},
     serviceLocation: {type: String, required: true},

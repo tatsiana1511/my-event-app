@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function LoginPage(props) {
@@ -22,7 +22,7 @@ function LoginPage(props) {
         try {
             const fetchResponse = await fetch('/api/users/login', {
                 method: 'POST',
-                headers: { "Content-Type": "application/json" },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })
             })
             if (!fetchResponse.ok) throw new Error('Fetch failed - Bad request')
@@ -42,15 +42,15 @@ function LoginPage(props) {
 
     return (
         <div>
-            <div className="form-container" onSubmit={handleSubmit}>
-                <form autoComplete="off">
+            <div className='form-container' onSubmit={handleSubmit}>
+                <form autoComplete='off'>
                     <label>Email</label>
-                    <input type="text" name="email" value={email} onChange={handleEmailChange} required />
+                    <input type='text' name='email' value={email} onChange={handleEmailChange} required />
                     <label>Password</label>
-                    <input type="password" name="password" value={password} onChange={handlePasswordChange} required />
-                    <button type="submit">LOG IN</button>
+                    <input type='password' name='password' value={password} onChange={handlePasswordChange} required />
+                    <button type='submit'>LOG IN</button>
                 </form>
-                <p className="error-message">&nbsp;{error}</p>
+                <p className='error-message'>&nbsp;{error}</p>
             </div>
         </div>
     )

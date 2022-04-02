@@ -11,6 +11,7 @@ const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 app.use('/api/users', require('./routes/api/users'));
@@ -24,25 +25,9 @@ app.get('/*', function(req, res) {
 
 // configure the keys for accessing AWS
 AWS.config.update({
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+    accessKeyId: process.env.AWSAccessKeyId,
+    secretAccessKey: process.env.AWSSecretKey,
 });
-
-// create S3 instance
-const s3 = new AWS.S3();  
-
-// abstracts function to upload a file returning a promise
-const uploadFile = (buffer, name, type) => {
-    const params = {
-      ACL: 'public-read',
-      Body: buffer,
-      Bucket: process.env.S3_BUCKET,
-      ContentType: type.mime,
-      Key: `${name}.${type.ext}`,
-    };
-    return s3.upload(params).promise();
-};
-
 
 const port = process.env.PORT || 3001;
 

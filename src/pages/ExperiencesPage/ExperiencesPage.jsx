@@ -29,7 +29,8 @@ function ExperiencesPages() {
                 allExperiences.map((exp) => {
                     return (
                         <div key={exp.serviceName} className='experience-card'>
-                            <div className="card-body">
+                            <div className='card-body'>
+                                <img class='card-img-top' src={`https://my-event-app-sei44.s3.ca-central-1.amazonaws.com/${exp.servicePhoto}`} alt='Card image cap'/>
                                 <div>
                                     <span className='service-name'> {exp?.serviceName}</span>
                                 </div>

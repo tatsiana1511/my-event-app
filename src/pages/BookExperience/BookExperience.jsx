@@ -58,7 +58,7 @@ function BookExperience() {
             let jwt = localStorage.getItem('token');
             const fetchResponse = await fetch('/api/bookings', {
                 method: 'POST',
-                headers: { "Content-Type": "application/json", 'Authorization': 'Bearer ' + jwt },
+                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + jwt },
                 body: JSON.stringify({
                     fullName,
                     eventName,
@@ -85,37 +85,37 @@ function BookExperience() {
     return (
         <div onSubmit={handleSubmit} className='form-container'>
             <h3>Please tell more about the event you want to book the experience for</h3>
-            <div className="custom-form">
+            <div className='custom-form'>
                 <form>
-                    <div className="form-group">
+                    <div className='form-group'>
                         <label className='col-form-label'>Full Name</label>
-                        <input className='form-control' type="text" name="full-name" value={fullName} onChange={handleFullNameChange} required></input>
+                        <input className='form-control' type='text' name='full-name' value={fullName} onChange={handleFullNameChange} required></input>
                     </div>
-                    <div className="form-group">
+                    <div className='form-group'>
                         <label className='col-form-label'>Event Name</label>
-                        <input className='form-control' type="text" name="event-name" value={eventName} onChange={handleEventNameChange} required></input>
+                        <input className='form-control' type='text' name='event-name' value={eventName} onChange={handleEventNameChange} required></input>
                     </div>
-                    <div className="form-group">
+                    <div className='form-group'>
                         <label className='col-form-label'>Event Location</label>
-                        <input className='form-control' type="text" name="event-location" value={eventLocation} onChange={handleEventLocationChange} required></input>
+                        <input className='form-control' type='text' name='event-location' value={eventLocation} onChange={handleEventLocationChange} required></input>
                     </div>
-                    <div className="form-group">
+                    <div className='form-group'>
                         <label className='col-form-label'>Number of People</label>
-                        <input className='form-control' type="number" name="number-of-people" value={numberOfPeople} onChange={handleNumberOfPeopleChange} required></input>
+                        <input className='form-control' type='number' name='number-of-people' value={numberOfPeople} onChange={handleNumberOfPeopleChange} required></input>
                     </div>
-                    <div className="form-group">
+                    <div className='form-group'>
                         <label className='col-form-label'>Duration of Experience (min 1h)</label>
-                        <input className='form-control' type ="number" text="duration-of-experience" value={durationOfExperience} onChange={handleDurationOfExperienceChange} required></input>
+                        <input className='form-control' type ='number' text='duration-of-experience' value={durationOfExperience} onChange={handleDurationOfExperienceChange} required></input>
                     </div>
-                    <div className="form-group">
+                    <div className='form-group'>
                         <label className='col-form-label'>Event Description</label>
-                        <input className='form-control' type="text" text="event-description" value={eventDescription} onChange={handleEventDescriptionChange} required></input>
+                        <input className='form-control' type='text' text='event-description' value={eventDescription} onChange={handleEventDescriptionChange} required></input>
                     </div>
-                    <div className="form-group">
+                    <div className='form-group'>
                         <label className='col-form-label'>Event Date</label>
-                        <input className='form-control' type="date" text="event-date" value={eventDate} onChange={handleEventDateChange} required></input>
+                        <input className='form-control' type='date' text='event-date' value={eventDate} onChange={handleEventDateChange} required></input>
                     </div>
-                        <button className='btn btn-success action-button' type="submit">BOOK</button>
+                        <button className='btn btn-success action-button' type='submit'>BOOK</button>
                 </form>
             </div>
         </div>

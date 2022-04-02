@@ -40,7 +40,7 @@ function SignUpPage(props) {
         try {
             const fetchResponse = await fetch('/api/users/signup', {
                 method: 'POST',
-                headers: { "Content-Type": "application/json"},
+                headers: { 'Content-Type': 'application/json'},
                 body: JSON.stringify({ name, email, password, confirmedPassword, isServiceProvider })
             })
 
@@ -64,27 +64,27 @@ function SignUpPage(props) {
         <div className='form-container'>
             <div className='custom-form' onSubmit={handleSubmit}>
                 <form className='create-form' autoComplete='off'>
-                    <div className="form-group">
+                    <div className='form-group'>
                         <label className='col-form-label'>Full Name</label>
-                        <input className='form-control' type="text" name="full-name" value={name} onChange={handleNameChange} required />
+                        <input className='form-control' type='text' name='full-name' value={name} onChange={handleNameChange} required />
                     </div>
-                    <div className="form-group">
+                    <div className='form-group'>
                         <label className='col-form-label'>Email</label>
-                        <input className='form-control' type="text" name="email" value={email} onChange={handleEmailChange} required />
+                        <input className='form-control' type='text' name='email' value={email} onChange={handleEmailChange} required />
                     </div>
-                    <div className="form-group">
+                    <div className='form-group'>
                         <label className='col-form-label'>Password</label>
-                        <input className='form-control' type="password" name="password" value={password} onChange={handlePasswordChange} required />
+                        <input className='form-control' type='password' name='password' value={password} onChange={handlePasswordChange} required />
                     </div>
-                    <div className="form-group">
+                    <div className='form-group'>
                         <label className='col-form-label'>Confirm Password</label>
-                        <input className='form-control' type="password" name="password" value={confirmedPassword} onChange={handleConfirmedPasswordChange} required />
+                        <input className='form-control' type='password' name='password' value={confirmedPassword} onChange={handleConfirmedPasswordChange} required />
                     </div>
-                    <div className="form-group">
+                    <div className='form-group'>
                         <label className='col-form-label'>I am a service provider</label>
-                        <input type="checkbox" value={isServiceProvider} onChange={handleIsServiceProviderChange} />
+                        <input type='checkbox' value={isServiceProvider} onChange={handleIsServiceProviderChange} />
                     </div>
-                    <button type="submit">SIGN UP</button>
+                    <button type='submit'>SIGN UP</button>
                 </form>
             </div>
             <p className='error-message'>&nbsp;{error}</p>

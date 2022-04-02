@@ -10,7 +10,7 @@ function MyServicePage(props) {
         let jwt = localStorage.getItem('token');
         async function populateMyService() {
             let response = await fetch('/api/experiences/my-service', {
-                headers: { "Content-Type": "application/json", 'Authorization': 'Bearer ' + jwt },
+                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + jwt },
             });
             let myServiceFromBackend = await response.json();
 
@@ -26,7 +26,7 @@ function MyServicePage(props) {
             let jwt = localStorage.getItem('token');
             const fetchResponse = await fetch(`/api/experiences/${myService._id}`, {
                 method: 'DELETE',
-                headers: { "Content-Type": "application/json", 'Authorization': 'Bearer ' + jwt },
+                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + jwt },
             })
 
             if (!fetchResponse.ok) throw new Error('Fetch failed - Bad request');
@@ -43,7 +43,7 @@ function MyServicePage(props) {
             <div className='cards-container'>
                 {myService ?
                 <div className='experience-card'>
-                    <div className="card-body">
+                    <div className='card-body'>
                         <div>
                             <span>Service name:</span>
                             <span> {myService?.serviceName}</span>
@@ -60,7 +60,7 @@ function MyServicePage(props) {
                             <span>Service price per hour:</span>
                             <span> {myService?.pricePerHour}</span>
                         </div>
-                        <Link to="/edit-service" className='btn btn-warning'>Edit</Link>
+                        <Link to='/edit-service' className='btn btn-warning'>Edit</Link>
                         <button className='btn btn-danger' onClick={deleteService}>Delete</button>
                     </div>
                 </div>

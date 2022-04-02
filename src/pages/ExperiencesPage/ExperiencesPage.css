@@ -19,7 +19,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: #0c2223;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 a.btn.btn-success {

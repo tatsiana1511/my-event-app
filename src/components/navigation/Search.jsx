@@ -18,7 +18,7 @@ function Search() {
 
     return (
         <li className='nav-item'>
-            <input className='search-input' type="text" name="search" placeholder="Search" value={query.toLowerCase()} onChange={handleQueryChange}></input>
+            <input className='search-input' type='text' name='search' placeholder='Search' value={query.toLowerCase()} onChange={handleQueryChange}></input>
             <button className='search' onClick={handleSearch}>Search</button>
         </li>
     )}

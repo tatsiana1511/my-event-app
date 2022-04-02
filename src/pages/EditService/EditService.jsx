@@ -16,7 +16,7 @@ function EditService() {
         let jwt = localStorage.getItem('token');
         async function populateMyService() {
             let response = await fetch('/api/experiences/my-service', {
-                headers: { "Content-Type": "application/json", 'Authorization': 'Bearer ' + jwt },
+                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + jwt },
             });
             let myServiceFromBackend = await response.json();
 
@@ -56,7 +56,7 @@ function EditService() {
             let jwt = localStorage.getItem('token');
             const fetchResponse = await fetch(`/api/experiences/${myService._id}`, {
                 method: 'POST',
-                headers: { "Content-Type": "application/json", 'Authorization': 'Bearer ' + jwt },
+                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + jwt },
                 body: JSON.stringify({ serviceName, serviceType, description, pricePerHour })
             })
 
@@ -73,32 +73,32 @@ function EditService() {
     return (
         <div onSubmit={handleSubmit} className='form-container'>
             <h3>Edit your service:</h3>
-            <div className="custom-form">
+            <div className='custom-form'>
                 <form>
-                    <div className="form-group">
+                    <div className='form-group'>
                         <label className='col-form-label'>Service Name</label>
-                        <input className='form-control' type="text" name="service-name" value={serviceName} onChange={handleServiceNameChange} required></input>
+                        <input className='form-control' type='text' name='service-name' value={serviceName} onChange={handleServiceNameChange} required></input>
                     </div>
-                    <div className="form-group">
+                    <div className='form-group'>
                         <label className='col-form-label'>Service Type</label>
-                        <select className='form-control' name="service-type" value={serviceType} onChange={handleServiceTypeChange}>
-                            <option value="">Select Service Type</option>
-                            <option value="food">Food</option>
-                            <option value="drinks">Drinks</option>
-                            <option value="master-class">Master Class</option>
-                            <option value="kids-entertainment">Kids Entertainment</option>
-                            <option value="other">Other</option>
+                        <select className='form-control' name='service-type' value={serviceType} onChange={handleServiceTypeChange}>
+                            <option value=''>Select Service Type</option>
+                            <option value='food'>Food</option>
+                            <option value='drinks'>Drinks</option>
+                            <option value='master-class'>Master Class</option>
+                            <option value='kids-entertainment'>Kids Entertainment</option>
+                            <option value='other'>Other</option>
                         </select>
                     </div>
-                    <div className="form-group">
+                    <div className='form-group'>
                         <label className='col-form-label'>Description</label>
-                        <input className='form-control' type="text" name="description" maxlength="200" value={description} onChange={handleDescriptionChange}></input>
+                        <input className='form-control' type='text' name='description' maxlength='200' value={description} onChange={handleDescriptionChange}></input>
                     </div>
-                    <div className="form-group">
+                    <div className='form-group'>
                         <label className='col-form-label'>Price per hour</label>
-                        <input className='form-control' type="number" name="price-per-hour" value={pricePerHour} onChange={handlePricePerHourChange}></input>
+                        <input className='form-control' type='number' name='price-per-hour' value={pricePerHour} onChange={handlePricePerHourChange}></input>
                     </div>
-                    <button className='btn btn-success action-button' type="submit">EDIT</button>
+                    <button className='btn btn-success action-button' type='submit'>EDIT</button>
                 </form>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState} from 'react';
 import '../ExperiencesPage/ExperiencesPage.css';
 
 function BookingRequests() {
@@ -9,7 +9,7 @@ function BookingRequests() {
     useEffect(() => {
         async function populateBookingRequests() {
             const response = await fetch('/api/bookings/booking-requests', {
-                headers: { "Content-Type": "application/json", 'Authorization': 'Bearer ' + jwt },
+                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + jwt },
             });
             const bookingRequestsFromBackend = await response.json();
             setBookingRequests(bookingRequestsFromBackend);
@@ -24,7 +24,7 @@ function BookingRequests() {
             let jwt = localStorage.getItem('token');
             const fetchResponse = await fetch('/api/bookings/accept-booking/' + bookingId, {
                 method: 'POST',
-                headers: { "Content-Type": "application/json", 'Authorization': 'Bearer ' + jwt },
+                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + jwt },
             })
 
             if (!fetchResponse.ok) throw new Error('Fetch failed - Bad request');
@@ -47,7 +47,7 @@ function BookingRequests() {
             let jwt = localStorage.getItem('token');
             const fetchResponse = await fetch('/api/bookings/reject-booking/' + bookingId, {
                 method: 'POST',
-                headers: { "Content-Type": "application/json", 'Authorization': 'Bearer ' + jwt },
+                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + jwt },
             })
 
             if (!fetchResponse.ok) throw new Error('Fetch failed - Bad request');
@@ -64,12 +64,12 @@ function BookingRequests() {
         }
     }
 
-    return (<div className="cards-container">
+    return (<div className='cards-container'>
         {
             bookingRequests.map((bookingRequest) => {
                 return (
                     <div key={bookingRequest.eventName} className='experience-card'>
-                        <div className="card-body">
+                        <div className='card-body'>
                         <div>
                                 <span>Full Name:</span>
                                 <span> {bookingRequest?.fullName}</span>
@@ -102,11 +102,11 @@ function BookingRequests() {
                                 <span>Status:</span>
                                 <span> {bookingRequest?.status}</span>
                             </div>
-                            <button className="btn btn-success" onClick={ (evt) => {
+                            <button className='btn btn-success' onClick={ (evt) => {
                                 acceptHandler(evt, bookingRequest._id)
                             }
                             }>Accept</button>
-                            <button className="btn btn-danger" onClick={ (evt) => {
+                            <button className='btn btn-danger' onClick={ (evt) => {
                                 rejectHandler(evt, bookingRequest._id)
                             }}>Reject</button>
                         </div>
