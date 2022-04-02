@@ -23,7 +23,7 @@ function MyBookings() {
         <div className='cards-container'>
             { userBookingsFromBackend.map((booking) => {
                 return (
-                    <div className='card experience-card'>
+                    <div className='experience-card'>
                         <div className='card-body'>
                             <div>
                                 <span>Full Name:</span>
