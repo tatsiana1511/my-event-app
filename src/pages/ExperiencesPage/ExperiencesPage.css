@@ -29,6 +29,10 @@ a.btn.btn-success {
     border: none;
 }
 
+.card-body img {
+    margin-bottom: 12px;
+}
+
 .service-name {
     font-size: 25px;
 }
