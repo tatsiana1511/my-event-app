@@ -5,6 +5,9 @@
 
 .nav {
     justify-content: space-between;
+}
+
+a.nav-link.app-name {
     font-family: 'Pangolin', cursive;
 }
 
@@ -44,4 +47,8 @@ a.nav-link.sub-nav {
 
 a.current-tab {
     border-bottom: #a76a61 solid 2px;
+}
+
+.about p {
+    font-size: 40px;
 }

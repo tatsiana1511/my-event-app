@@ -18,7 +18,7 @@ function MainNavbar(props) {
           </li>
           <Search />
         </div>
-        <div class="nav-block signup-login">
+        <div className="nav-block signup-login">
           <li className="nav-item">
             <Link to="/signup" className="nav-link">Sign Up</Link>
           </li>

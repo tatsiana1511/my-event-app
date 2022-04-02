@@ -61,19 +61,29 @@ function SignUpPage(props) {
     }
 
     return (
-        <div>
-            <div className='form-container' onSubmit={handleSubmit}>
-                <form autoComplete='off'>
-                    <label>Full Name</label>
-                    <input type="text" name="full-name" value={name} onChange={handleNameChange} required />
-                    <label>Email</label>
-                    <input type="text" name="email" value={email} onChange={handleEmailChange} required />
-                    <label>Password</label>
-                    <input type="password" name="password" value={password} onChange={handlePasswordChange} required />
-                    <label>Confirm Password</label>
-                    <input type="password" name="password" value={confirmedPassword} onChange={handleConfirmedPasswordChange} required />
-                    <label>I am a service provider</label>
-                    <input type="checkbox" value={isServiceProvider} onChange={handleIsServiceProviderChange} />
+        <div className='form-container'>
+            <div className='custom-form' onSubmit={handleSubmit}>
+                <form className='create-form' autoComplete='off'>
+                    <div className="form-group">
+                        <label className='col-form-label'>Full Name</label>
+                        <input className='form-control' type="text" name="full-name" value={name} onChange={handleNameChange} required />
+                    </div>
+                    <div className="form-group">
+                        <label className='col-form-label'>Email</label>
+                        <input className='form-control' type="text" name="email" value={email} onChange={handleEmailChange} required />
+                    </div>
+                    <div className="form-group">
+                        <label className='col-form-label'>Password</label>
+                        <input className='form-control' type="password" name="password" value={password} onChange={handlePasswordChange} required />
+                    </div>
+                    <div className="form-group">
+                        <label className='col-form-label'>Confirm Password</label>
+                        <input className='form-control' type="password" name="password" value={confirmedPassword} onChange={handleConfirmedPasswordChange} required />
+                    </div>
+                    <div className="form-group">
+                        <label className='col-form-label'>I am a service provider</label>
+                        <input type="checkbox" value={isServiceProvider} onChange={handleIsServiceProviderChange} />
+                    </div>
                     <button type="submit">SIGN UP</button>
                 </form>
             </div>

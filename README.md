@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+![Imgur](https://imgur.com/w37W6zi.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of content
 
-## Available Scripts
+- [Why](#why)
+- [About the application](#about-the-application)
+- [Technologies used](#technologies-used)
+- [Where to find](#where-to-find)
+- [Future functionality](#future-functionality)
+---
+## Why
+I think our home parties and hangouts should become more diverse and go beyond just eating and playing board games. There are a lot of talented people that can share their skills and make your event filled with great experiences.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## About the application
+The idea of the platform is to **connect** event hosts and people who provide services for private parties.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+An **event host** should be able to see all available experiences. Once logged in the option to book an experience comes up.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+A **service provider** can sign up to become a member of the platform and add the services.
 
-### `npm test`
+![Platform home page](https://imgur.com/LeGQWlv.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Technologies used
+While developing I used React framework, ExpressJS, Mongoose, JWT authentication, HTML, CSS.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The app currently performs full CRUD. The following features are also included: multi-roles users, Search, uploading pictures using AWS S3 bucket.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Where to find
+Whenever you have a birthday party, anniversary celebration or regular hangout with your friends, or you are a service provider that can make someone's event filled with an interesing activity please visit My Event app by clicking [here](https://project2-int-design.herokuapp.com). Don't forget to sign up.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Future functionality
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* add a calendar with unavailable dates for a service <s>crossed out</s>
+* add a filter by category, location or price for all experiences page
+* add a map to enable search by location

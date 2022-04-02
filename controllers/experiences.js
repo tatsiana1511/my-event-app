@@ -6,6 +6,7 @@ module.exports = {
     getAllExperiences,
     deleteService,
     editService,
+    addPhoto,
 };
 
 async function create(req, res) {
@@ -62,4 +63,8 @@ async function editService(req, res) {
     } catch (err) {
         res.status(400).json(err);
     }
+}
+
+async function addPhoto(req, res) {
+    
 }
