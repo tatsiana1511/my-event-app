@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './CreateService/CreateService.css';
 
 function LoginPage(props) {
     const [email, setEmail] = useState('');
@@ -48,7 +49,7 @@ function LoginPage(props) {
                     <input type='text' name='email' value={email} onChange={handleEmailChange} required />
                     <label>Password</label>
                     <input type='password' name='password' value={password} onChange={handlePasswordChange} required />
-                    <button type='submit'>LOG IN</button>
+                    <button className='btn btn-success action-button' type='submit'>LOG IN</button>
                 </form>
                 <p className='error-message'>&nbsp;{error}</p>
             </div>

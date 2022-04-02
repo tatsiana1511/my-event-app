@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './CreateService/CreateService.css';
 
 function SignUpPage(props) {
 
@@ -84,7 +85,7 @@ function SignUpPage(props) {
                         <label className='col-form-label'>I am a service provider</label>
                         <input type='checkbox' value={isServiceProvider} onChange={handleIsServiceProviderChange} />
                     </div>
-                    <button type='submit'>SIGN UP</button>
+                    <button className='btn btn-success action-button' type='submit'>SIGN UP</button>
                 </form>
             </div>
             <p className='error-message'>&nbsp;{error}</p>
